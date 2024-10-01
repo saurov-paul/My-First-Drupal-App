@@ -1,0 +1,3 @@
+palindrome_checker:
+    js:
+      js/dist/main.min.js: {}

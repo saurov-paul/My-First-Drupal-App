@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ language.language }}">
+	<head>
+		<head-placeholder token="{{ placeholder_token }}">
+			<title>{{ head_title|safe_join(' | ') }}</title>
+			{{ attach_library('xpaul_theme/global') }}
+		</head>
+		<body>
+			<header class="header">
+				{{ page.header }}
+				<nav>
+					<div class="logo flex">
+						<img class="mr-2" style="width: 80px; border-radius: 50%" src="/themes/custom/xpaul_theme/assets/xpaul.png"/>
+						<h2>Elegance...</h2>
+					</div>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#project">Project</a></li>
+						<li><a href="#conatct">Contact</a></li>
+					</ul>
+				</nav>
+				<br/>
+				<div class="heading">
+					<h1>Welcome to the xpaul_theme for new Elegance Experience</h1>
+				</div>
+				<nav class="menu">
+					{{ page.menu }}
+				</nav>
+			</header>
+
+			<nav id="primary-menu">
+				{{ page.primary_menu }}
+			</nav>
+
+			<main id="content">
+				{{ page.content }}
+			</main>
+
+			<aside id="sidebar-first">
+				{{ page.sidebar_first }}
+			</aside>
+
+			<footer id="footer">
+				<p>&copy;
+					{{ "now"|date("Y") }}
+					Theme Design by Paul. All rights reserved.</p>
+			</footer>
+		</body>
+	</head>
+</html>

@@ -1,0 +1,3 @@
+simple_app:
+    js:
+      js/dist/main.min.js: {}

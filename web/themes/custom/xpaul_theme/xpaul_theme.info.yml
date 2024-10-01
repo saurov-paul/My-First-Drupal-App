@@ -1,0 +1,19 @@
+name: 'X Paul Theme'
+type: theme
+base theme: false
+description: 'A custom theme built from scratch for Drupal.'
+core_version_requirement: ^10 || ^11
+package: Custom
+version: 0.0.1
+
+
+libraries:
+  - xpaul_theme/global
+
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  content: 'Content'
+  sidebar_first: 'First Sidebar'
+  footer: 'Footer'

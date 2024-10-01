@@ -1,0 +1,102 @@
+#root {
+  max-width: 1200px; /* Slightly reduced for a tighter layout */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 6rem;
+  padding: 1.5rem;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 300ms;
+  cursor: pointer; /* Makes it clear that logos are interactive */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2rem #646cffaa);
+  transform: scale(1.1); /* Slight zoom effect on hover for interactivity */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2rem #61dafbaa);
+  transform: scale(1.1);
+}
+
+/* Spin effect only when motion is allowed by user preferences */
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 15s linear; /* Reduced time for a faster spin */
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  padding: 2.5rem;
+  background-color: #2c2c4f; /* Darker background for the card */
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Softer, elevated shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  max-width: 600px;
+  margin: 1rem auto; /* Ensure cards are centered on smaller screens */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Elevate on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.read-the-docs {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #bbb; /* Slight color change on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+    max-width: 100%; /* Cards take full width on smaller screens */
+  }
+
+  .logo {
+    height: 4.5rem; /* Smaller logos for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4rem; /* Smaller logos for very small screens */
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .read-the-docs {
+    font-size: 0.9rem; /* Smaller font for smaller screens */
+  }
+}
+

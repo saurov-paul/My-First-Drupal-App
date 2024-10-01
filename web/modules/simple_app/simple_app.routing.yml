@@ -1,0 +1,7 @@
+simpleapp.content:
+  path: '/tasks'
+  defaults:
+   _controller: '\Drupal\simple_app\Controller\TaskController::content'
+   _title: 'Task Status'
+  requirements:
+   _permission: 'access content'
